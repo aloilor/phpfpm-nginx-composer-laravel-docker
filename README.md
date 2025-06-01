@@ -1,4 +1,4 @@
-# Laravel + Statamic Docker Image
+# PHP-FPM + Nginx + Composer + Laravel Docker Image
 
 This Docker image provides a production-ready environment for running Laravel and Statamic applications. It combines Nginx, PHP-FPM 8.3, and Supervisor in a single container, optimized for AWS ECS/Fargate deployment.
 
