@@ -1,6 +1,6 @@
 # PHP-FPM + Nginx + Composer + Laravel Docker Image
 
-This Docker image provides a production-ready environment for running Laravel and Statamic applications. It combines Nginx, PHP-FPM 8.3, and Supervisor in a single container, optimized for AWS ECS/Fargate deployment.
+This Docker image provides a production-ready environment for running Laravel and Statamic applications. It combines Nginx, PHP-FPM 8.3, and Supervisor in a single container.
 
 ## Image Components
 
@@ -54,8 +54,7 @@ The image implements a comprehensive logging strategy optimized for container en
 This logging setup ensures:
 - All logs are properly captured in container environments
 - Compatibility with AWS CloudWatch
-- No log file rotation issues in containers
-- Proper error tracking without exposing sensitive information
+
 
 ### 5. Health Checks
 - Built-in health check endpoint at `/healthz`
@@ -68,7 +67,7 @@ This logging setup ensures:
 - Listens on port 8080
 - Configured for Laravel/Statamic routing
 - Includes health check endpoint
-- Optimized for PHP-FPM communication
+
 
 ### Supervisor Configuration
 - Runs in foreground mode (PID 1)
@@ -94,4 +93,4 @@ The application can be configured using standard Laravel environment variables.
 
 - The image is designed to run as a single container in production
 - All logs are properly forwarded to container logs
-- The setup is optimized for AWS ECS/Fargate deployment
+- The setup is optimizedg for AWS ECS/Fargate logging into Cloudwatch through awslogs driver.
